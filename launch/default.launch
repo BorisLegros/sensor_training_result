@@ -12,4 +12,5 @@
     <node name="point_cloud_assembler" pkg="laser_assembler" type="point_cloud_assembler">
         <!--- normalement le topic /cloud est deja conecte au 2 nodes ---> 
     </node>
+    <node name="pubCloud" pkg="sensor_training_result" type="pubCloud.py"/>
 </launch>
