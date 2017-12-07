@@ -6,5 +6,9 @@
     <include file="$(find sensor_training)/launch/control.launch"/>
 
     <node name="lidar_turn" pkg="sensor_training_result" type="lidar_turn.py"/>
-    <node name="camera_lidar" pkg="sensor_training" type="camera_lidar.py"/>
+    <node name="camera_lidar" pkg="sensor_training" type="camera_lidar.py">
+        
+    </node>
+    <node name="point_cloud_assembler" pkg="laser_assembler" type="point_cloud_assembler">
+    </node>
 </launch>
