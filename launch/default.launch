@@ -1,0 +1,10 @@
+<launch>
+    <include file="$(find simple_turtlebot)/launch/simple_turtlebot.launch">    
+        <arg name="world" value="$(find sensor_training_result)/world/envi.world"/>
+        <arg name="xacro_file" value="$(find sensor_training_result)/urdf/simple_turtlebot.urdf.xacro"/>
+    </include>
+    <include file="$(find sensor_training)/launch/control.launch"/>
+
+    <node name="lidar_turn" pkg="sensor_training_result" type="lidar_turn.py"/>
+    <node name="camera_lidar" pkg="sensor_training" type="camera_lidar.py"/>
+</launch>
